@@ -16,7 +16,6 @@ void Graph::DFS(int startFrom){
     std::cout << startFrom << " has been visited\n";
 
     std::vector<int> children = adjList[startFrom];
-    //std::cout << children.size();
     for(int i=0; i<children.size(); i++){
         if(std::find(visitedNodes.begin(), visitedNodes.end(), children[i]) == visitedNodes.end()){
             //Vertex unmarked
@@ -24,4 +23,5 @@ void Graph::DFS(int startFrom){
         }
     }
 }
+
 
